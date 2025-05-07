@@ -1,4 +1,4 @@
-use borsh::{BorshDeserialize, BorshSerialize}; 
+use borsh::{BorshDeserialize, BorshSerialize};
 use solana_program::{
     account_info::{next_account_info, AccountInfo},
     pubkey::Pubkey,
@@ -23,7 +23,7 @@ pub fn counter_contract(
     program_id: &Pubkey,
     accounts: &[AccountInfo],
     instruction_data: &[u8]
-) -> ProgramResult {
+) -> ProgramResult {    
     let accounts_iter = &mut accounts.iter();
     let account = next_account_info(accounts_iter)?;
     
